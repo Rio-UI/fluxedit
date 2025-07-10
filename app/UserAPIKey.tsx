@@ -20,23 +20,21 @@ export function UserAPIKey() {
   }, [userAPIKey]);
 
   return (
-    <div className="flex gap-3">
-      <div className="text-left text-xs max-md:hidden">
-        <p className="text-gray-600">[Optional] Add your</p>
-        <a
-          href="https://api.together.xyz/settings/api-keys"
-          target="_blank"
-          className="text-gray-300 underline"
-        >
-          Together API Key:
-        </a>
-      </div>
+    <div className="flex gap-3 items-center">
+      <a
+        href="https://api.riiio.chat/console/token"
+        target="_blank"
+        className="text-left text-xs leading-8" // leading-8 = 32px
+        style={{ lineHeight: '32px' }}
+      >
+        获取 API
+      </a>
       <input
         type="password"
         value={userAPIKey}
         autoComplete="off"
         onChange={(e) => setUserAPIKey(e.target.value)}
-        placeholder="API key"
+        placeholder="请输入API密钥"
         className="h-8 rounded border-[0.5px] border-gray-700 bg-gray-900 px-2 text-sm focus-visible:outline focus-visible:outline-gray-200"
       />
     </div>

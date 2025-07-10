@@ -85,20 +85,20 @@ export function ImageUploader({
       {!pending ? (
         <>
           <div className="flex grow flex-col justify-center">
-            <p className="text-xl text-white">Drop a photo</p>
-            <p className="mt-1 text-gray-500">or click to upload</p>
+            <p className="text-xl text-white">拖拽图片到此处</p>
+            <p className="mt-1 text-gray-500">或点击上传</p>
           </div>
 
           <div className="pb-3">
             <p className="text-sm text-gray-500">
-              Powered by <span className="text-white">Together.ai</span>
+              由 <span className="text-white">Rio API</span> 提供支持
             </p>
           </div>
         </>
       ) : (
         <div className="text-white">
           <Spinner />
-          <p className="mt-2 text-lg">Uploading...</p>
+          <p className="mt-2 text-lg">正在上传...</p>
         </div>
       )}
 

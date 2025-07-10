@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "api.together.ai",
+        hostname: "api.riiio.chat",
       },
       {
         protocol: "https",

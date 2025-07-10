@@ -170,7 +170,7 @@ export default function Home() {
           {!activeImage ? (
             <>
               <h1 className="mx-auto max-w-md text-center text-2xl text-balance text-white md:text-4xl">
-                Edit any image with a simple prompt
+                用一句话智能编辑图片
               </h1>
 
               <div className="mt-8">
@@ -218,7 +218,7 @@ export default function Home() {
                     </div>
                     {activeImage.prompt && (
                       <div>
-                        <p className="text-xs text-gray-400">Prompt used:</p>
+                        <p className="text-xs text-gray-400">使用的提示词：</p>
                         <p className="text-sm text-gray-50 md:text-base">
                           {activeImage.prompt}
                         </p>
@@ -226,7 +226,7 @@ export default function Home() {
                     )}
                   </div>
                   <button
-                    title="Download this image"
+                    title="下载此图片"
                     onClick={handleDownload}
                     className="flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-white text-gray-900 transition hover:bg-gray-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
@@ -240,10 +240,10 @@ export default function Home() {
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-gray-900/75">
                     <Spinner className="size-6 text-white" />
                     <p className="animate-pulse text-xl text-white">
-                      Editing your image...
+                      图片智能处理中...
                     </p>
                     <p className="text-sm text-gray-400">
-                      This can take up to 15 seconds.
+                      预计需要15秒左右，请耐心等待。
                     </p>
                   </div>
                 )}
@@ -295,7 +295,7 @@ export default function Home() {
                         htmlFor="model-select"
                         className="mb-2 block text-sm font-medium text-gray-300"
                       >
-                        Model
+                        模型
                       </label>
                       <div className="relative">
                         <select
@@ -309,14 +309,13 @@ export default function Home() {
                           className="w-full appearance-none rounded-lg border border-gray-700 bg-gray-800 px-3 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                         >
                           <option value="black-forest-labs/FLUX.1-kontext-dev">
-                            Flux Kontext Dev
+                            标准模型（免费）
                           </option>
                           <option
                             value="black-forest-labs/FLUX.1-kontext-pro"
                             disabled={!hasApiKey}
                           >
-                            Flux Kontext Pro{" "}
-                            {!hasApiKey && "(Together API key required)"}
+                            高级模型（需API密钥）
                           </option>
                         </select>
                         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
@@ -339,8 +338,7 @@ export default function Home() {
                         selectedModel ===
                           "black-forest-labs/FLUX.1-kontext-pro" && (
                           <p className="mt-1 text-xs text-amber-400">
-                            Pro model requires an API key. Please add your
-                            Together AI API key to use this model.
+                            高级模型需要API密钥，请在右上角输入你的API密钥。
                           </p>
                         )}
                     </div>
@@ -354,7 +352,7 @@ export default function Home() {
                         className="mr-2 w-full px-3 py-4 pr-14 focus-visible:outline-none disabled:opacity-50 md:hidden"
                         value={prompt}
                         onChange={(e) => setPrompt(e.target.value)}
-                        placeholder="Tell us the changes you want..."
+                        placeholder="请输入你想要的修改..."
                         required
                       />
 
@@ -366,7 +364,7 @@ export default function Home() {
                         className="mr-2 w-full px-4 py-5 pr-14 focus-visible:outline-none disabled:opacity-50 max-md:hidden"
                         value={prompt}
                         onChange={(e) => setPrompt(e.target.value)}
-                        placeholder="Tell us the changes you want..."
+                        placeholder="请输入你想要的修改..."
                         required
                       />
 
@@ -407,9 +405,9 @@ export default function Home() {
                       }}
                       className="cursor-pointer rounded leading-none text-sky-500 focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-sky-500"
                     >
-                      Select the latest version
+                      选择最新版本
                     </button>{" "}
-                    to make more edits.
+                    以继续编辑。
                   </p>
                 )}
               </div>

@@ -34,8 +34,7 @@ export function SampleImages({
   return (
     <div className="rounded-xl bg-gray-900 p-4">
       <p className="text-gray-500">
-        Nothing to upload?{" "}
-        <span className="text-gray-300">Try a sample image:</span>
+        没有图片可上传？<span className="text-gray-300">试试示例图片：</span>
       </p>
       <div className="mt-3 flex gap-4 overflow-x-auto max-md:-mx-4 max-md:px-4 max-md:pb-4">
         {sampleImages.map((sample) => (
